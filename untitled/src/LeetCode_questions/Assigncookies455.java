@@ -11,8 +11,7 @@ public class Assigncookies455 {
 
 
         public static String doorStatus(int n) {
-            // Write your code here.
-            boolean door[]=new boolean[n+1];
+            boolean []door=new boolean[n+1];
             for(int j=1;j<=n;j++){
                 for(int i=1;i<=n;i++){
                     if(i%j==0){
@@ -25,10 +24,6 @@ public class Assigncookies455 {
 
             return s.toString();
         }
-
-
-
-
 }
 
 
