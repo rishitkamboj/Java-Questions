@@ -10,15 +10,6 @@ public class Assigncookies455 {
 
 
 
-
-
-
-
-
-
-
-
-
         public static String doorStatus(int n) {
             // Write your code here.
             boolean door[]=new boolean[n+1];
