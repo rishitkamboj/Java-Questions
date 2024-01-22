@@ -7,9 +7,6 @@ public class Assigncookies455 {
         System.out.println(doorStatus(4));
     }
 
-
-
-
         public static String doorStatus(int n) {
             boolean []door=new boolean[n+1];
             for(int j=1;j<=n;j++){
