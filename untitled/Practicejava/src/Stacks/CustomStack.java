@@ -33,7 +33,7 @@ public class CustomStack {
 
 public int peek() throws StackException{
     if(isEmpty()){
-        throw new StackException("Cannot peek from an empty stack");
+        throw new StackException("Cannot peek from an empty stack"); 
     }
         return data[top];
 }
