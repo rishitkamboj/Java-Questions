@@ -5,11 +5,11 @@ public class diameter {
 
     }
     int diameter=0;
-    public int diameterOfBinaryTree(TreeNode root) {
+    public int diameterOfBinaryTree(count root) {
         height(root);
         return diameter-1;
     }
-    public int height(TreeNode root){
+    public int height(count root){
         if(root==null){
             return 0;
         }

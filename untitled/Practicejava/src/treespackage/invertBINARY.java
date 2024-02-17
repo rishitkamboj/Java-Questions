@@ -4,12 +4,12 @@ public class invertBINARY {
     public static void main(String[] args) {
 
     }
-    public TreeNode invertTree(TreeNode root){
+    public count invertTree(count root){
         if (root == null){
             return null;
         }
-        TreeNode left=invertTree(root.left);
-        TreeNode right=invertTree(root.right);
+        count left=invertTree(root.left);
+        count right=invertTree(root.right);
 
         root.left=right;
         root.right=left;
