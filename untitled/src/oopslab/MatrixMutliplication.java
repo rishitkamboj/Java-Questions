@@ -43,6 +43,16 @@ public class MatrixMutliplication {
             }
         }
 
+
+
+
+
+
+
+
+
+
+
         // Print the result matrix
         System.out.println("Result of matrix multiplication:");
         for (int i = 0; i < r1; i++) {
