@@ -38,6 +38,7 @@ class Book extends library{
     String authorname;
 
     void getBook(String n,String i,int cop,String a){
+        super.input("CSE",500,50);
         this.name=n;
         this.isbn=i;
         this.noofcopies=cop;

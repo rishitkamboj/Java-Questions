@@ -38,7 +38,7 @@ public class student {
     public static void main(String[] args) {
 
         student s1=new student();
-        s1.input(12,"Rishit","Uni",1200,new int[]{99,98,78});
+        s1.input(12,"Rishit","Uni",1200,new int[]{99,98,98});
         s1.display();
         s1.average();
 
