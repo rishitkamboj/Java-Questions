@@ -11,6 +11,8 @@ package oopslab;
             System.out.println("youre eligible to vote");
 }
 
+
+
     public static void main(String[] args) {
         age a=new age();
         try{
@@ -19,6 +21,8 @@ package oopslab;
         catch(Exception e){
             System.out.println(e.getMessage());
         }
+
+
     }
 
 class InvalidAgeException extends Exception{
@@ -26,3 +30,4 @@ class InvalidAgeException extends Exception{
             super(s);
         }
 }}
+

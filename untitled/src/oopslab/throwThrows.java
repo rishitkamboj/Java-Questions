@@ -17,8 +17,10 @@ public class throwThrows  {
 
 class Excep {
     void abc() throws AgeException{
-        throw new AgeException("abc exception");
+        throw new AgeException("abcd exception");
     }
+
+
 
 }
 

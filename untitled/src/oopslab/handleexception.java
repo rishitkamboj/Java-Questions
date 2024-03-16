@@ -16,7 +16,7 @@ public class handleexception {
 
     try{
         int a=2/0;
-        String b="abc";
+        String b="abcd";
         int ab=Integer.parseInt(b);
         String abc=null;
        char ch= abc.charAt(2);

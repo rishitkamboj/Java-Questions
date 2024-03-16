@@ -8,7 +8,7 @@ abstract class abc {
 
 
 
-public class interfacesss extends abc  {
+public class interfacesss extends abcd {
   public  void abcde(){
 
     }
