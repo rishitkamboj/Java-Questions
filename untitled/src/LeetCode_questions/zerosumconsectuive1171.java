@@ -3,7 +3,7 @@ package LeetCode_questions;
 import java.util.ArrayList;
 
 public class zerosumconsectuive1171 {
-}
+
 
 
  class ListNode {
@@ -33,5 +33,6 @@ class Solution {
           }
           cur=cur.next;
       }
-    }
-}
+      return head;
+
+}}}
