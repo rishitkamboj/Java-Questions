@@ -1,4 +1,5 @@
 package LeetCode_questions;
+import java.util.Arrays;
 
 public class cpuschedular621 {
     public static void main(String[] args) {
