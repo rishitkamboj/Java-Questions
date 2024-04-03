@@ -38,7 +38,6 @@ public class login {
         a2.setBounds(200,100,120,20);
         sub.setBounds(150,150,100,30);
 
-        // Adding components to JFrame
         f.add(sub);
         f.add(p1);
         f.add(p2);

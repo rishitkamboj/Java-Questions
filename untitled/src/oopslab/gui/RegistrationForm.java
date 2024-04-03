@@ -65,7 +65,7 @@ public class RegistrationForm {
         sub.setBounds(100, 280, 80, 30);
         r.setBounds(200, 280, 80, 30);
 
-        // Add components to the frame
+
         f1.add(head);
         f1.add(fn);
         f1.add(fnt);
