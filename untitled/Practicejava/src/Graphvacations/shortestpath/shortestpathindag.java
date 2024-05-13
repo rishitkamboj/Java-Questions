@@ -22,13 +22,14 @@ public class shortestpathindag {
                      topo(temp,vis,path,stack);
                  }
              }
-             stack.push(node);
+             stack.add(node);
    }
 
     public int[] shortestPath(int N,int M, int[][] edges) {
         ArrayList<ArrayList<Pair>> adj=new ArrayList<>();
         for (int i=0;i<N;i++){
-            adj.add(new ArrayList<Pair>());
+            ArrayList < Pair > temp = new ArrayList < Pair > ();
+            adj.add(temp);
         }
         for(int i=0;i<M;i++){
             int u = edges[i][0];
@@ -43,18 +44,23 @@ public class shortestpathindag {
                 topo(i,vis,adj,stack);
             }
         }
-        int dist[]=new int[N];
-        Arrays.fill(dist,-1);
+        int dist[] = new int[N];
+        Arrays.fill(dist, (int) (1e9));
+
         dist[0]=0;
         while(!stack.isEmpty()){
-            int node=stack.pop();
+            int node = stack.peek();
+            stack.pop();
             for(int i=0;i<adj.get(node).size();i++){
                 int v = adj.get(node).get(i).first;
                 int wt = adj.get(node).get(i).second;
-                if(dist[v]==-1){
+                if(dist[node] + wt < dist[v]){
                     dist[v]=dist[node]+wt;
                 }
             }
+        }
+        for (int i = 0; i < N; i++) {
+            if (dist[i] == 1e9) dist[i] = -1;
         }
 return dist;
    }
