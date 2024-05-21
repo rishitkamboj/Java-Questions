@@ -3,7 +3,7 @@ package Graphvacations.disjoinset;
 import java.util.ArrayList;
 import java.util.List;
 
-public class DisjointSet {
+class DisjointSet {
     List<Integer> rank=new ArrayList<>();
     List<Integer> parent=new ArrayList<>();
     List<Integer> size=new ArrayList<>();
@@ -23,7 +23,7 @@ public class DisjointSet {
         parent.set(node,ul);
         return parent.get(node);
     }
-    public void unionByParent(int node1,int node2){
+    public void unionByRank(int node1, int node2){
         int uu=findParent(node1);
         int uv=findParent(node2);
         if(uu==uv){
@@ -44,7 +44,7 @@ public class DisjointSet {
     }
 
 
-    public void unionByRank(int node1,int node2){
+    public void unionBySize(int node1, int node2){
         int uu=findParent(node1);
         int uv=findParent(node2);
         if(uu==uv){
@@ -64,18 +64,18 @@ public class DisjointSet {
 
     public static void main(String[] args) {
         DisjointSet ds=new DisjointSet(7);
-        ds.unionByParent(1,2);
-        ds.unionByParent(2,3);
-        ds.unionByParent(4,5);
-        ds.unionByParent(6,7);
-        ds.unionByParent(5,6);
+        ds.unionByRank(1,2);
+        ds.unionByRank(2,3);
+        ds.unionByRank(4,5);
+        ds.unionByRank(6,7);
+        ds.unionByRank(5,6);
         if(ds.findParent(3)==ds.findParent(7)){
             System.out.println("SAME");
         }
         else {
             System.out.println("DIFFERENT");
         }
-        ds.unionByParent(3,7);
+        ds.unionByRank(3,7);
         if(ds.findParent(3)==ds.findParent(7)){
             System.out.println("SAME");
         }
