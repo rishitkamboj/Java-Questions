@@ -1,11 +1,17 @@
 package dynamicprogramming.subsequences;
 
 public class countsubsequenceswithsumK {
+    public static void main(String[] args) {
+        System.out.println("hello");
+        System.out.println();
+    }
+
     class Solution{
+
 
         public int perfectSum(int arr[],int n, int sum)
         {
-
+return 1;
         }
 
         public int recur(int ind,int sum,int arr[]){

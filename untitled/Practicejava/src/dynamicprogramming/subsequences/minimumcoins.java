@@ -12,6 +12,9 @@ public class minimumcoins {
 
     }
 
+    public static void main(String[] args) {
+        System.out.println();
+    }
         public int recursion(int ind,int T,int[]coins){
             if(ind==0){
                 if(T%coins[0]==0){
