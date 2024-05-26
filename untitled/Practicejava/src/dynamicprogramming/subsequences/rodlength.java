@@ -2,7 +2,7 @@ package dynamicprogramming.subsequences;
 
 public class rodlength {
     public int cutRod(int price[], int n) {
-
+return 1;
     }
 
 
