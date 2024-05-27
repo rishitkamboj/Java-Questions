@@ -2,11 +2,9 @@ package dynamicprogramming.subsequences;
 
 public class countsubsequenceswithsumK {
     public static void main(String[] args) {
-        System.out.println("hello");
-        System.out.println();
+        System.out.println(tabulation(new int[]{5,3,2,1,8,3,2},5));
     }
 
-    class Solution{
 
 
         public int perfectSum(int arr[],int n, int sum)
@@ -46,7 +44,7 @@ return 1;
             return dp[ind][sum]=pick+notpick;
         }
 
-        public int tabulation(int []arr,int sum){
+        public static int tabulation(int []arr,int sum){
             int n=arr.length;
             int dp[][]=new int[n][sum+1];
 
@@ -81,7 +79,7 @@ return dp[n-1][sum];
 
 
 
-    }
+
 
 
 
