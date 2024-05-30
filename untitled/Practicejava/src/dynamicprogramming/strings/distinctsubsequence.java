@@ -1,6 +1,10 @@
 package dynamicprogramming.strings;
 
 public class distinctsubsequence {
+    public static void main(String[] args) {
+        String s ="1101";
+        System.out.println(Integer.parseInt(s));
+    }
     public int numDistinct(String s, String t) {
 return 1;
     }
