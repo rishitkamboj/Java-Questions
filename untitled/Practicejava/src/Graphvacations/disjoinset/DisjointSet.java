@@ -1,6 +1,7 @@
 package Graphvacations.disjoinset;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
 
 class DisjointSet {
@@ -45,6 +46,7 @@ class DisjointSet {
 
 
     public void unionBySize(int node1, int node2){
+        HashSet<Integer> s=new HashSet<>();
         int uu=findParent(node1);
         int uv=findParent(node2);
         if(uu==uv){
