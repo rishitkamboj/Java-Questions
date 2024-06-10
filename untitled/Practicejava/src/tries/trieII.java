@@ -70,7 +70,7 @@ public class trieII {
                 return 0;
             }
         }
-        return n.getPref();
+        return n.getEnd();
     }
 
 
