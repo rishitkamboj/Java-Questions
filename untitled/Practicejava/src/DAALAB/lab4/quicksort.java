@@ -1,12 +1,12 @@
-package DAALAB.lab3;
+package DAALAB.lab4;
 
 import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
 
-public class mergesort {
+public class quicksort {
     public static void main(String[] args) {
-      Scanner scanner = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
 
 
         System.out.print("Enter the size of the array: ");
@@ -33,60 +33,58 @@ public class mergesort {
         System.out.println("Best case values: ");
         time(asc);
 
-        System.out.println("Average case values: ");;
-        time(random);
 
         System.out.println("Worst case values: ");
         time(dsc);
 
 
+        System.out.println("Average case values: ");;
+        time(random);
 
 
-    }
-
-
-
-
-   public static  void mergesort(int s,int e,int arr[]){
-       if (s >= e) {
-           return;
-       }
-       int mid = s + (e - s) / 2;
-
-       mergesort(s, mid, arr);
-
-       mergesort(mid + 1, e, arr);
-       merge(s, mid, e, arr);
 
     }
     public static void time(int arr[]){
         long startTime=System.nanoTime();
-        mergesort(0,arr.length-1,arr);
+       quicksortt(arr, 0, arr.length-1);
         long endTime=System.nanoTime();
         double duration = (endTime - startTime) / 1_000_000_000.0;
         System.out.println(Arrays.toString(arr));
         System.out.println(duration);
     }
 
-    public static void merge(int s, int mid, int e, int arr[]) {
-        int[] merge = new int[e - s + 1];
-        int i = s, j = mid + 1, k = 0;
 
-        while (i <= mid && j <= e) {
-            if (arr[i] <= arr[j]) {
-                merge[k++] = arr[i++];
-            } else {
-                merge[k++] = arr[j++];
+
+    public static void quicksortt(int arr[], int s, int e) {
+        if (s < e) {
+            int q = quick(arr, s, e);
+            quicksortt(arr, s, q - 1);
+            quicksortt(arr, q + 1, e);
+        }
+    }
+
+    public static int quick(int arr[], int s, int e) {
+        int i = s + 1;
+        int j = e;
+        int key = arr[s];
+        while (i <= j) {
+            while (i <= e && arr[i] <= key) {
+                i++;
+            }
+            while (j >= s && arr[j] > key) {
+                j--;
+            }
+            if (i < j) {
+                swap(arr, i, j);
             }
         }
-        while (i <= mid) {
-            merge[k++] = arr[i++];
-        }
-        while (j <= e) {
-            merge[k++] = arr[j++];
-        }
-        for (int p = 0; p < merge.length; p++) {
-            arr[s + p] = merge[p];
-        }
+        swap(arr, s, j);
+        return j;
+    }
+
+    public static void swap(int arr[], int i, int j) {
+        int temp = arr[i];
+        arr[i] = arr[j];
+        arr[j] = temp;
     }
 }

@@ -8,6 +8,8 @@ public class rightrotate {
 
     public static void main(String[] args) {
         int arr[]={11,22,33,44,55,66,77,88,99};
+        System.out.println("Input given:");
+        System.out.println(Arrays.toString(arr));
         rightrotate(arr,5,9);
         System.out.println(Arrays.toString(arr));
     }

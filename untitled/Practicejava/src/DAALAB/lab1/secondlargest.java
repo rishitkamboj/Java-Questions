@@ -4,7 +4,10 @@ import java.util.Arrays;
 
 public class secondlargest {
     public static void main(String[] args) {
-        System.out.println(Arrays.toString(largestsmallest(new int[]{2, 4, 5, 6}, 4)));
+        int arr[]={2, 4, 5, 6};
+        System.out.println("Input: ");
+        System.out.println(Arrays.toString(arr));
+        System.out.println(Arrays.toString(largestsmallest(arr, 4)));
     }
 
 

@@ -1,12 +1,13 @@
-package DAALAB.lab3;
+package DAALAB.lab4;
 
 import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
 
-public class mergesort {
+public class mergeIV {
+
     public static void main(String[] args) {
-      Scanner scanner = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
 
 
         System.out.print("Enter the size of the array: ");
@@ -47,16 +48,17 @@ public class mergesort {
 
 
 
-   public static  void mergesort(int s,int e,int arr[]){
-       if (s >= e) {
-           return;
-       }
-       int mid = s + (e - s) / 2;
+    public static  void mergesort(int s,int e,int arr[]){
+        if (s >= e) {
+            return;
+        }
+        int mid = s+(e-s)/3;
 
-       mergesort(s, mid, arr);
 
-       mergesort(mid + 1, e, arr);
-       merge(s, mid, e, arr);
+        mergesort(s, mid, arr);
+
+        mergesort(mid + 1, e, arr);
+        merge(s, mid, e, arr);
 
     }
     public static void time(int arr[]){
@@ -90,3 +92,4 @@ public class mergesort {
         }
     }
 }
+

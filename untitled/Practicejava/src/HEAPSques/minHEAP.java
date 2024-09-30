@@ -27,7 +27,7 @@ public class minHEAP {
             return ;
         }
         int parent=(i-1)/2;
-      if(arr[i]>arr[parent]){
+      if(arr[i]<arr[parent]){
           swap(i,parent,arr);
       }
       upheap(parent);
@@ -38,6 +38,7 @@ public class minHEAP {
         int temp=arr[0];
         arr[0]=arr[n-1];
        downheap(0);
+       n--;
        return temp;
     }
     void downheap(int i){

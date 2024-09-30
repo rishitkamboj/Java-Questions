@@ -2,7 +2,7 @@ package DAALAB.lab3;
 
 public class ternarysearch {
     public static void main(String[] args) {
-        int arr[]={1,2,3,4,5,6,7,8,9};
+        int arr[]={1,2,3,4,5,6,7,8,9,10};
         System.out.println(ternary(0, arr.length-1, arr,8));
     }
 
@@ -11,9 +11,11 @@ public class ternarysearch {
         if(s>e){
             return -1;
         }
-        int mid=s+(e-s)/3;
-        int mid2 = e - (e - s) / 3; // mid2= 2*mid
 
+        int mid=s+(e-s)/3;
+        System.out.println("mid 1 is "+mid);
+        int mid2 = e - (e - s) / 3; // mid2= 2*mid
+        System.out.println("mid2 is "+mid2);
 
         if(arr[mid]==tar){
             return mid;
