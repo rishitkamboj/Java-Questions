@@ -13,7 +13,7 @@ public class sortanArrayof012 {
         int e=arr.length-1;
         while(m<=e){
             if(arr[m]==0){
-                swap(s,m,arr);
+                //swap(s,m,arr);
                 s++;
                 m++;
             }
@@ -21,7 +21,7 @@ public class sortanArrayof012 {
                 m++;
             }
            else{
-                swap(m,e,arr);
+               // swap(m,e,arr);
                 e--;
             }
         }
