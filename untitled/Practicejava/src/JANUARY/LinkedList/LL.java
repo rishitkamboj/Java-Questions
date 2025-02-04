@@ -102,6 +102,7 @@ Node reverseLL(){
         ll.head=ll.insert(7);
         ll.display();
 
+
         ll.display();
 
         ll.head=ll.reverseLL();
